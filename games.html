@@ -3,61 +3,246 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Buy video games for multiple platforms - GamezExpress">
-    <meta name="keywords" content="buy games, Xbox, PlayStation, Nintendo, PC, game store">
+    <meta name="description" content="Buy your favorite videogames - GamezExpress">
+    <meta name="keywords" content="buy games, Xbox, PlayStation, Nintendo, PC, top selling, upcoming releases, game store">
     <title>Buy Games - GamezExpress</title>
-    <link rel="stylesheet" href="styles/Style.css">
+    <link rel="icon" href="images/gamezexpress-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/gamezexpressstyling.css">
+
+    <style>
+        /* Internal CSS - */
+        /* Nintendo Direct Section */
+            .nintendo-direct {
+            background: linear-gradient(to right, #1b1b1b, #292929);
+            padding: 30px 20px;
+            border-radius: 12px;
+            width: 70%;
+            margin: 40px auto;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(255, 0, 153, 0.2);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Heading Style */
+         .nintendo-direct h2 {
+         color: #00bbff;
+         font-size: 26px;
+         margin-bottom: 20px;
+         text-transform: uppercase;
+         letter-spacing: 1px;
+         border-bottom: 2px dashed #00eeff;
+         padding-bottom: 10px;
+        }
+
+        /* Video Responsive Wrapper */
+         .video-wrapper {
+         position: relative;
+         padding-bottom: 56.25%; /* 16:9 ratio */
+         height: 0;
+         overflow: hidden;
+         border-radius: 10px;
+         box-shadow: 0 0 10px rgba(0, 204, 255, 0.3);
+         margin-bottom: 20px;
+        }
+
+         .video-wrapper iframe {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         border: none;
+         border-radius: 10px;
+        }
+
+        /* Clickable Link */
+         .direct-link {
+         display: inline-block;
+         background: #e3dc08;
+         color: #c61010;
+         padding: 12px 20px;
+         border-radius: 25px;
+         font-size: 16px;
+         font-weight: bold;
+         text-decoration: none;
+         transition: all 0.3s ease;
+         box-shadow: 0 0 10px rgba(255, 0, 153, 0.4);
+        }
+
+
+        .direct-link:hover {
+         background: #dde80a;
+         transform: scale(1.05);
+         box-shadow: 0 0 15px rgba(139, 12, 88, 0.6);
+        }
+
+</style>
 </head>
 <body>
+
     <header>
-        <div class="logo">
-            <img src="images/controller.avif" alt="GamezExpress Logo">
+        <section class="logo">
+            <h2 class="visually-hidden">GamezExpress Logo</h2>
+            <img src="images/gamezexpress-logo.png" alt="GamezExpress Logo">
+        </section>
+        <h1>Explore the World of Gaming</h1>
+
+           <!-- Search Bar -->
+    <form class="search-bar">
+        <input type="text" placeholder="Search games, add-ons..." name="search">
+        <button type="submit">🔍</button>
+    </form>
+   </header>
+
+<main>
+
+    <section class="nintendo-direct">
+        <h2>🎮 Check out the latest Nintendo Direct 🎮</h2>
+      
+        <div class="video-wrapper">
+        <iframe
+          width="560"
+         height="315"
+         src="https://www.youtube.com/embed/VrTVeYm4iIM?si=pWV38h5t_A2flaES"
+         style="border: none;"
+         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+         allowfullscreen>
+        </iframe>
         </div>
-        <h1>Buy Your Favorite Games</h1>
-    </header>
+      
+        <a class="direct-link" href="https://youtu.be/VrTVeYm4iIM?si=pWV38h5t_A2flaES" target="_blank">
+          👉 Click here to watch on YouTube!
+        </a>
+      </section>
 
-    <main>
-        <section class="instructions">
-            <h2>How It Works</h2>
-            <p>Purchase games for your favorite platform. Once you complete your purchase, you will receive a unique game code on your invoice. Simply enter the code on your console or PC to download your game to enable cross platform playabiltiy</p>
-            <p>If you need help, <a href="https://support.microsoft.com/en-us">contact our support team</a>.</p>
-        </section>
+    <!-- Sidebar for upcoming games (Unordered List) -->
+    <aside class="upcoming-game-releases">
+        <h2>Check out the latest upcoming titles!</h2>
+        <ul>
+            <li><span class="game-title">Metroid Prime 4: Beyond</span>  <span class="release-date">TBC 2025</span></li>
+            <li><span class="game-title">DOOM: The Dark Ages</span>  <span class="release-date">May 15th 2025</span></li>
+            <li><span class="game-title">Elden Ring: Nightreign</span>  <span class="release-date">May 30th 2025</span></li>
+            <li><span class="game-title">Tony Hawk's Pro Skater 3 + 4</span>  <span class="release-date">July 11th 2025</span></li>
+            <li><span class="game-title">Metal Gear Solid Delta: Snake Eater</span>  <span class="release-date">August 28th 2025</span></li>
+            <li><span class="game-title">Hell is Us</span>  <span class="release-date">September 4th 2025</span></li>
+            <li><span class="game-title">Directive 8020</span>  <span class="release-date">October 2nd 2025</span></li>
+            <li><span class="game-title">GTA 6</span>  <span class="release-date">TBC</span></li>
+        </ul>
+    </aside>
+      
 
-        <section class="platforms">
-            <article class="platform xbox">
-                <h2>🎮 Xbox Games</h2>
-                <p>Find the best Xbox titles available for purchase.</p>
-                <a href="https://www.xbox.com/en-IE/">Browse Xbox Games</a>
-            </article>
+    <!-- Main Content: Trending Games (Ordered List) -->
+    <section class="trending-games">
+        <h2>Top 15 Trending Games This Month</h2>
+        <ol>
+            <li>Counter-Strike 2</li>
+            <li>Schedule I</li>
+            <li>R.E.P.O.</li>
+            <li>Marvel Rivals</li>
+            <li>Rust</li>
+            <li>Grand Theft Auto V Legacy</li>
+            <li>Team Fortress 2</li>
+            <li>ELDEN RING</li>
+            <li>Red Dead Redemption II</li>
+            <li>Assasin's Creed Shadows</li>
+            <li>Terraria</li>
+            <li>Left 4 Dead 2</li>
+            <li>Garry's Mod</li>
+            <li>Ark Survival Ascended</li>
+            <li>Fallout 4</li>
+        </ol>
 
-            <article class="platform playstation">
-                <h2>🎮 PlayStation Games</h2>
-                <p>Shop for PlayStation's hottest games.</p>
-                <a href="https://store.playstation.com/en-ie/pages/latest?gad_source=1&gclid=EAIaIQobChMIiJqXh_GTjAMVGpVQBh21MjLBEAAYASAAEgLk_PD_BwE&gclsrc=aw.ds">Browse PlayStation Games</a>
-            </article>
+        <!-- Steam Store Link -->
+    <div class="steam-link">
+        <a href="https://store.steampowered.com/charts/mostplayed/" target="_blank">
+             View the full list on Steam
+        </a>
+    </div>
+    </section>
 
-            <article class="platform nintendo">
-                <h2>🎮 Nintendo Games</h2>
-                <p>Explore games for Switch, 3DS, and more.</p>
-                <a href="https://www.nintendo.com/en-gb/Nintendo-eShop/Nintendo-eShop-1806894.html?srsltid=AfmBOopwkzdG_8lpEJHH4rgIMv2w1rWNjtFSxSHU62h6t7muWoLtlN6W">Browse Nintendo Games</a>
-            </article>
 
-            <article class="platform pc">
-                <h2>🖥️ PC Games</h2>
-                <p>Buy PC games and download instantly.</p>
-                <a href="https://store.steampowered.com/">Browse PC Games</a>
-            </article>
-        </section>
-    </main>
-
+    <!-- Table of Game Statistics -->
+<h2>Top Selling Games of All Time</h2>
+<table class="best-selling-games">
+    <thead>
+        <tr>
+            <th>Game</th>
+            <th>Genre</th>
+            <th>Copies Sold</th>
+            <th>Developer</th>
+            <th>Release Date</th>
+            <th>Rating</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Tetris</td>
+            <td>Puzzle</td>
+            <td>520 million</td>
+            <td>The Tetris Company, Inc (TTC)</td>
+            <td>1985</td>
+            <td>9/10</td>
+        </tr>
+        <tr>
+            <td>Minecraft</td>
+            <td>Sandbox, Survival</td>
+            <td>300 million</td>
+            <td>Mojang Studios</td>
+            <td>May 17th 2009</td>
+            <td>9/10</td>
+        </tr>
+        <tr>
+            <td>Grand Theft Auto V</td>
+            <td>Action-Adventure</td>
+            <td>200 million</td>
+            <td>RockStar Games</td>
+            <td>Sep 17th 2013</td>
+            <td>10/10</td>
+        </tr>
+        <tr>
+            <td>Wii Sports</td>
+            <td>Sports Simulation</td>
+            <td>83 million</td>
+            <td>Nintendo</td>
+            <td>Nov 19th 2006</td>
+            <td>8.4/10</td>
+        </tr>
+        <tr>
+            <td>Mario Kart 8 + Deluxe</td>
+            <td>Kart Racing Game</td>
+            <td>62 million</td>
+            <td>Nintendo</td>
+            <td>April 28th 2017</td>
+            <td>9.3/10</td>
+        </tr>
+        <tr>
+            <td>The Elder Scrolls V: Skyrim</td>
+            <td>Action, Role-playing</td>
+            <td>60 million</td>
+            <td>Bethesda Game Studios</td>
+            <td>Nov 11th 2011</td>
+            <td>9.5/10</td>
+        </tr>
+        <tr>
+            <td>Red Dead Redemption II</td>
+            <td>Action-Adventure</td>
+            <td>50 million</td>
+            <td>RockStar Games</td>
+            <td>Oct 26th 2018</td>
+            <td>10/10</td>
+        </tr>
+    </tbody>
+</table>
+</main>
+   
     <footer>
         <p>&copy; 2025 GamezExpress. All Rights Reserved.</p>
         <nav>
-            <a href="home.html">Home</a> |
+            <a href="index.html">Home</a> |
             <a href="games.html">Games</a> |
             <a href="addons.html">Add-ons</a> |
             <a href="build.html">Build</a> |
-            <a href="points.html">Points</a>
+            <a href="account.html">Account</a>
         </nav>
     </footer>
 </body>

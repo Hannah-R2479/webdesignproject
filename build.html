@@ -6,16 +6,315 @@
     <meta name="description" content="Buy video games for multiple platforms - GamezExpress">
     <meta name="keywords" content="buy games, Xbox, PlayStation, Nintendo, PC, game store">
     <title>Build your own PC - GamezExpress</title>
-    <link rel="stylesheet" href="styles/Style.css">
+    <link rel="icon" href="images/gamezexpress-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/gamezexpressstyling.css">
+
+    <style>
+        /* Internal Styling - Instructions */
+        .instructions {
+          background-color: #1e1e1e;
+          color: #e0ffe5;
+          padding: 20px;
+          border-radius: 10px;
+          box-shadow: 0 0 10px rgba(0, 255, 128, 0.2);
+          margin: 30px auto;
+          max-width: 900px;
+          font-size: 16px;
+          line-height: 1.6;
+        }
+      
+        .instructions h2 {
+          color: #00ff99;
+          border-bottom: 2px solid #00ff99;
+          padding-bottom: 8px;
+          text-transform: uppercase;
+          text-align: center;
+        }
+      
+        .instructions a {
+          color: #00e1ff;
+          font-weight: bold;
+          text-decoration: none;
+        }
+      
+        .instructions a:hover {
+          color: #ffcc00;
+          text-decoration: underline;
+        }
+
+    /* PC Building Video */
+        section.pc-building-video {
+            background: linear-gradient(to right, #1b1b1b, #252424);
+            padding: 30px;
+            width: 70%;
+            margin: 40px auto;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(255, 0, 153, 0.2);
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .pc-building-video h2 {
+            font-size: 26px;;
+            color: #13abb9;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px dashed #00eeff;
+            padding-bottom: 10px;
+        }
+        .pc-building-video-wrapper {
+            position: relative;
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 204, 255, 0.3);
+            padding-bottom: 56.25%;
+        }
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 10px;
+        }
+
+        a.pc-building-direct-link {
+         display: inline-block;
+         background: #e3dc08;
+         color: #c61010;
+         padding: 12px 20px;
+         border-radius: 25px;
+         font-size: 16px;
+         font-weight: bold;
+         text-decoration: none;
+         transition: all 0.3s ease;
+         box-shadow: 0 0 10px rgba(255, 0, 153, 0.4);
+        }
+        a.pc-building-direct-link:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(139, 12, 88, 0.6);
+        }
+
+        /* Past PC Order Examples */
+        .gamezexpress-pc-builds {
+  background: linear-gradient(to right, #0f0f0f, #1a1a1a);
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.gamezexpress-pc-builds h2 {
+  font-size: 30px;
+  color: #00ffe1;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  border-bottom: 2px dashed #00ffe1;
+  display: inline-block;
+  padding-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.pc-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.pc-card {
+  background: #222;
+  border-radius: 18px;
+  overflow: hidden;
+  width: 300px;
+  box-shadow: 0 0 20px rgba(0, 255, 200, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.pc-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(0, 255, 200, 0.3);
+}
+
+.pc-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 2px solid #00ffe1;
+}
+
+.pc-card h3 {
+  font-size: 20px;
+  color: #00ffe1;
+  margin: 15px 20px 10px;
+  text-transform: uppercase;
+}
+
+.pc-card ul {
+  list-style: none;
+  padding: 0 20px 20px;
+  margin: 0;
+}
+
+.pc-card li {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #ccc;
+}
+
+.pc-card li strong {
+  color: #fff;
+}
+
+
+    </style>
+</head>
+  
+<body>
+    <header>
+        <section class="logo">
+            <h2 class="visually-hidden">GamezExpress Logo</h2>
+            <img src="images/gamezexpress-logo.png" alt="GamezExpress Logo">
+        </section>
+        <h1>Build your own custom PC</h1>
+
+          <!-- Search Bar -->
+    <form class="search-bar">
+        <input type="text" placeholder="Search consoles..." name="search">
+        <button type="submit">🔍</button>
+    </form>
+    </header>
+
+    <main>
+        <section class="instructions">
+            <h2>How It Works</h2>
+            <p>Fill in the form(s) below detailing your email and which console you want to request to mod or an order detailing what specifically you want for a pc, you will be sent a follow up email with a list of suggestions on parts based on your request</p>
+            <p>If you need help, <a href="https://support.microsoft.com/en-us" target="_blank">contact our support team</a>.</p>
+        </section>
+    </main>
+
+        <section class="forms">
+            <h2 class="visually-hidden">Building Forms</h2>  
+            
+
+            <!-- Modding Console Form -->
+            <article class="form modding-form">
+              <h3>Modding Console Form</h3>
+              <form action="https://consolemods.org/wiki/Main_Page" method="get">
+                <label for="modding-name">Name<span class="required">*</span></label>
+                <input type="text" id="modding-name" name="name" required>
+          
+                <label for="modding-email">Email<span class="required">*</span></label>
+                <input type="email" id="modding-email" name="email" required>
+          
+                <label for="modding-console">Console<span class="required">*</span></label>
+                <input type="text" id="modding-console" name="console" required>
+          
+                <input type="submit" value="Submit">
+              </form>
+            </article>
+          
+            <!-- Custom PC Form -->
+            <article class="form pc-form">
+              <h3>Custom PC Form</h3>
+              <form action="https://consolemods.org/wiki/Main_Page" method="get">
+                <label for="pc-name">Name<span class="required">*</span></label>
+                <input type="text" id="pc-name" name="name" required>
+          
+                <label for="pc-email">Email<span class="required">*</span></label>
+                <input type="email" id="pc-email" name="email" required>
+          
+                <label for="pc-description">Ideal PC<span class="required">*</span></label>
+                <input type="text" id="pc-description" name="features" required>
+          
+                <input type="submit" value="Submit">
+              </form>
+            </article>
+          
+          </section>
+
+          <section class="gamezexpress-pc-builds">
+            <h2>Here are some examples of previous built orders</h2>
+            <div class="pc-card-container">
+          
+              <!-- Example Build 1 -->
+              <div class="pc-card">
+                <img src="images/pcbuildexample.webp" alt="Build 1">
+                <h3>StormRunner</h3>
+                <ul>
+                  <li><strong>CPU:</strong> Ryzen 7 5800X</li>
+                  <li><strong>GPU:</strong> RTX 3080</li>
+                  <li><strong>RAM:</strong> 32GB DDR4</li>
+                  <li><strong>Storage:</strong> 1TB NVMe + 2TB HDD</li>
+                  <li><strong>Built:</strong> 2022</li>
+                  <li><strong>Price:</strong> ~$2,000</li>
+                </ul>
+              </div>
+          
+              <!-- Example Build 2 -->
+              <div class="pc-card">
+                <img src="images/pcbuildingexample2.webp" alt="Build 2">
+                <h3>Project Eclipse</h3>
+                <ul>
+                  <li><strong>CPU:</strong> Intel i5-12600K</li>
+                  <li><strong>GPU:</strong> RTX 3060 Ti</li>
+                  <li><strong>RAM:</strong> 16GB DDR5</li>
+                  <li><strong>Built:</strong> 2023</li>
+                  <li><strong>Price:</strong> ~$1,300</li>
+                </ul>
+              </div>
+          
+              <!-- Example Build 3 -->
+              <div class="pc-card">
+                <img src="images/pc-example-3.webp" alt="Build 3">
+                <h3>RetroBox Mini</h3>
+                <ul>
+                  <li><strong>CPU:</strong> Intel Core 2 Duo</li>
+                  <li><strong>GPU:</strong> GT 710</li>
+                  <li><strong>RAM:</strong> 4GB DDR3</li>
+                  <li><strong>Built:</strong> 2020</li>
+                  <li><strong>Price:</strong> ~$150</li>
+                </ul>
+              </div>
+          
+            </div>
+          </section>
+        
+          <section class="pc-building-video">
+            <h2>Recommended video on introduction to console modding/pc building</h2>
+          
+            <div class="pc-building-video-wrapper">
+              <iframe 
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/QXjTKVv_1OU?si=1SGTwTeq0pbepoxl"
+              style="border: none;"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+              </iframe>
+            </div>
+          
+            <a class="pc-building-direct-link" href="https://www.youtube.com/embed/QXjTKVv_1OU?si=1SGTwTeq0pbepoxl" target="_blank">
+              👉 Click here!
+            </a>
+          </section>
+
+          
+          
+
 
     <footer>
         <p>&copy; 2025 GamezExpress. All Rights Reserved.</p>
         <nav>
-            <a href="home.html">Home</a> |
+            <a href="index.html">Home</a> |
             <a href="games.html">Games</a> |
             <a href="addons.html">Add-ons</a> |
             <a href="build.html">Build</a> |
-            <a href="points.html">Points</a>
+            <a href="account.html">Account</a>
         </nav>
     </footer>
 </body>

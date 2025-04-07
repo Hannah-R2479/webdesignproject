@@ -1,0 +1,658 @@
+/* General Page Styles - Index Page */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('../images/xbox.jpg'); /*no-repeat center center fixed; */
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.visually-hidden {
+    position: absolute;
+    left: -9999px;
+  }
+
+
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark overlay */
+    z-index: -1
+}
+
+/* Background Overlay (Makes Text Easier to Read) */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    z-index: -1;
+}
+
+/* Header */
+header {
+    background: rgba(0, 0, 0, 0.7); /* Black with transparency */
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    display: flex;;
+    align-items: center;
+    justify-content: space-between; /* Spreads content evenly */
+}
+
+/* Logo Styling*/
+.logo img {
+    height: 50px;
+    margin-right: 15px;
+    border-radius: 10px;
+}
+
+/* Nav Menu */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+/* Title & Info - More Readable - Index/Home page*/
+h1 {
+    font-size: 32px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+    margin-right: 40%;
+}
+
+
+/* Search Bar Styling */
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 20px;
+    padding: 5px;
+    width: 250px; /* Adjust width as needed */
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    flex: 1; /* Takes up available space */
+    border-radius: 20px;
+}
+
+.search-bar button {
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+/* Info Section */
+.text-container {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    font-size: 18px;
+}
+
+
+
+/* Categories Section - Index Page */
+.categories {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.category {
+    text-align: center;
+    width: 200px;
+}
+
+.category img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.category img:hover {
+    transform: scale(1.1);
+}
+
+.category a {
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #00ccff;
+    text-decoration: none;
+}
+
+.category a:hover {
+    color: #ff00ff;
+}
+
+
+
+/* Games Page */
+/* Table of best selling games - table of statistics */
+.best-selling-games {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    background-color: #1a1a1a;
+    color: #06bf12;
+    overflow: hidden;
+    font-size: 14px; /* smaller text */
+}
+
+.best-selling-games th, .best-selling-games td {
+    border: 1px solid gray;
+    padding: 12px 15px;
+    text-align: center;
+}
+
+.best-selling-games th {
+    background-color: #2e1756; /* Rich purple */
+    color: #ffffff;
+    font-size: 1.1em;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    border-bottom: 3px solid gray;
+}
+
+.best-selling-games tbody tr {
+    transition: background-color 0.3s ease;
+}
+
+.best-selling-games tbody tr:hover {
+    background-color: #2e2e2e;
+    transition: 0.2s ease-in-out;
+}
+
+/*Zebra rows for readability */
+.best-selling-games tbody tr:nth-child(even) {
+    background-color: #252525;
+}
+
+
+
+/* Upcoming Releases Section (unordered list)*/
+.upcoming-game-releases {
+    background: linear-gradient(#090608, #1b0620);
+    border: 1px solid rgba(210, 9, 9, 0.1);
+    padding: 24px;
+    border-radius: 15px;
+    width: 60%;
+    margin: 30px auto;
+    text-align: left;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Heading - Upcoming Releases */
+.upcoming-game-releases h2 {
+    text-align: center;
+    color: #00ff26;
+    border-bottom: 2px dashed #00ff26;
+    padding-bottom: 6px;
+    font-size: 26px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Unordered List Styling - Upcoming Releases */
+.upcoming-game-releases ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* List Items - Upcoming Releases */
+.upcoming-game-releases ul li {
+    background: rgb(28, 10, 44);
+    border-left: 4px solid #2a0e31;
+    margin: 10px 0;
+    padding: 14px 20px;
+    border-radius: 12px;
+    font-size: 17px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color:#34ef1c;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/*Bullet / Icon */
+.upcoming-game-releases ul li::before {
+    list-style: disc;
+    font-size: 18px;
+    margin-right: 10px;
+    color: #66ff7a;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effects */
+.upcoming-game-releases ul li:hover {
+    background: rgba(255, 0, 153, 0.1);
+    transform: translateX(5px);
+}
+
+.upcoming-game-releases ul li:hover::before {
+    transform: rotate(10deg);
+}
+
+
+
+
+/* Trending Games Section (ordered list) */
+.trending-games {
+    background: radial-gradient(circle at top left, #1f1f1f, #0a0a0a);
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%; /* Reduced the width to 60% */
+    margin: 20px auto;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Heading - Trending Games */
+.trending-games h2 {
+    text-align: center;
+    color: #1ce316;
+    border-bottom: 3px solid #1fd02b;
+    padding-bottom: 5px;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+/* Ordered List Styling - Trending Games*/
+.trending-games ol {
+    list-style: none; /* Remove default numbers */
+    counter-reset: game-rank;
+    padding: 0;
+}
+
+/* List Items - Trending Games*/
+.trending-games ol li {
+    background: rgb(14, 13, 16);
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: #2b73e7;
+    transition: transform 0.3s, background 0.3s;
+    cursor: pointer;
+    position: relative;
+    padding-left: 50px; /* Space for custom number */
+}
+
+/* Custom Numbering - Trending Games */
+.trending-games ol li::before {
+    counter-increment: game-rank;
+    content: counter(game-rank);
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #39ff14;
+    color: #0f0f0f;
+    font-size: 18px;
+    font-weight: bold;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Hover Effects - Trending Games */
+.trending-games ol li:hover {
+    background: rgba(57, 255, 20, 0.15);
+    transform: scale(1.02)
+}
+
+.trending-games ol li:hover::before {
+    background: #00ff88;
+    color: #074412;
+}
+
+/* Steam Link Styling */
+.steam-link {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.steam-link a {
+    display: inline-block;
+    background: #321543;
+    color: #18a0ca;
+    padding: 10px 18px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.3s;
+    
+}
+
+.steam-link a:hover {
+    background: #1f2064;
+    transform: scale(1.05);
+    
+}
+
+
+
+/* Addons Page
+/* Popular Gaming Accesories (CSS Column Property)*/
+.accessory-columns {
+    background: linear-gradient(to right, #0f0f0f, #1e1e1e);
+    color: #e0ffe5;
+    padding: 50px 30px;
+    border-radius: 15px;
+    width: 90%;
+    margin: 40px auto;
+    box-shadow: 0 0 20px rgba(0, 255, 100, 0.2);
+    text-align: center;
+  }
+  
+  .accessory-columns h2 {
+    font-size: 28px;
+    color: #66ff99;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .column-content {
+    column-count: 3;
+    column-gap: 30px;
+  }
+  
+  .accessory-item {
+    break-inside: avoid;
+    margin-bottom: 30px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  
+  .accessory-item:hover {
+    background-color: rgba(0, 255, 128, 0.1);
+    transform: scale(1.03);
+  }
+  
+  .accessory-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border-radius: 8px;
+  }
+  
+  .accessory-item h4 {
+    font-size: 18px;
+    color: #00ff88;
+    margin-bottom: 5px;
+  }
+  
+  .accessory-item p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  
+  .accessory-link {
+    margin-top: 30px;
+  }
+  
+  .accessory-link a {
+    color: #00ff88;
+    font-weight: bold;
+    text-decoration: none;
+    background: rgba(0, 255, 128, 0.1);
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+  }
+  
+  .accessory-link a:hover {
+    background: rgba(0, 255, 128, 0.3);
+  }
+  
+
+/* Comparison Hardware Table - Addons Page */
+  .mega-compare {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+    background: rgba(17, 7, 26, 0.913);
+    margin-top: 20px;
+  }
+  
+  .mega-compare th,
+  .mega-compare td {
+    border: 1px solid #4c4a4a;
+    padding: 10px;
+    text-align: center;
+    color: #e7fce9;
+  }
+  
+  .mega-compare th {
+    background-color: #230c25;
+    color: #2cec45;
+    font-weight: bold;
+  }
+  
+  .mega-compare td:first-child {
+    font-weight: bold;
+    background-color: rgba(0, 255, 128, 0.05);
+    color: #00ffaa;
+  }
+  
+  .mega-compare a {
+    color: #00e1ff;
+    text-decoration: underline;
+  }
+  
+
+  /* Featured Product - Addons Page */
+  .featured-product {
+  background: linear-gradient(to left, #0f0f0f, #1f1f1f);
+  color: #e0ffe5;
+  padding: 50px 30px;
+  border-radius: 15px;
+  width: 90%;
+  margin: 40px auto;
+  box-shadow: 0 0 20px rgba(0, 255, 100, 0.15);
+  text-align: center;
+}
+
+.featured-product h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #00ff99;
+}
+
+.product-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.03);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.product-card img {
+  width: 300px;
+  border-radius: 10px;
+}
+
+.product-info {
+  max-width: 400px;
+  text-align: left;
+}
+
+.product-info h3 {
+  font-size: 22px;
+  color: #00ffcc;
+  margin-bottom: 10px;
+}
+
+.product-info p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.product-btn {
+  background: #00ff88;
+  color: #111;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.product-btn:hover {
+  background: #00ffaa;
+}
+
+
+
+
+/* PC Building Page */
+/* Forms */
+.forms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    padding: 40px;
+}
+
+/* Shared Form Style */
+.forms .form {
+    width: 100%;
+    max-width: 400px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.forms .form:hover {
+    transform: scale(1.02);
+}
+
+.forms h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+/* Required asterisk styling */
+.required {
+    color: red;
+    margin-left: 5px;
+}
+
+/* Inputs and labels */
+.forms label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.forms input[type="text"],
+.forms input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    background-color: #f0f0f0;
+    margin-bottom: 15px;
+}
+
+.forms input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #00ccff;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.forms input[type="submit"]:hover {
+    background-color: #00aacc;
+}
+
+/* 🎮 Modding Form Style */
+.modding-form {
+    background: linear-gradient(145deg, #1a1a1a, #2b2b2b);
+    color: #00ff99;
+    border-left: 5px solid #00ff99;
+}
+
+/* 🖥️ PC Form Style */
+.pc-form {
+    background: linear-gradient(145deg, #202020, #303030);
+    color: #66ccff;
+    border-left: 5px solid #66ccff;
+}
+
+
+
+
+
+
+/* Footer (all pages)*/
+footer {
+    background-color: #222;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+footer nav {
+    margin-top: 10px;
+}
+
+footer nav a {
+    color: #00ccff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer nav a:hover {
+    color: #ff00ff;
+} 
+
+
+
+

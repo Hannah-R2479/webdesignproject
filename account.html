@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Buy video games for multiple platforms - GamezExpress">
+    <meta name="keywords" content="buy games, Xbox, PlayStation, Nintendo, PC, game store">
+    <title>Profile/Account - GamezExpress</title>
+    <link rel="icon" href="images/gamezexpress-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/gamezexpressstyling.css">
+
+    <style>
+    /* Accounts Page */
+/* Account Section Container */
+.account-section {
+    display: flex;
+    justify-content: center;
+    margin: 40px auto;
+}
+
+/* Card Style */
+.account-card {
+    background: linear-gradient(135deg, #1a1a1a, #262626);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 204, 255, 0.2);
+    width: 300px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Avatar */
+.avatar img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #00ccff;
+    margin-bottom: 15px;
+}
+
+/* Account Info */
+.account-info h3 {
+    color: #00ccff;
+    font-size: 20px;
+    margin: 0;
+}
+
+.account-info p {
+    color: #ccc;
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+/* Buttons */
+.account-actions {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.edit-btn, .logout-btn {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    font-size: 14px;
+}
+
+.edit-btn {
+    background: #00ccff;
+    color: #121212;
+}
+
+.logout-btn {
+    background: #ff4d4d;
+    color: white;
+}
+
+.edit-btn:hover, .logout-btn:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+
+/* Points on Profile */
+.account-extra {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.points-summary,
+.recent-orders {
+  background: #1c1c1c;
+  border: 1px solid #00ccff;
+  border-radius: 12px;
+  padding: 20px;
+  width: 280px;
+  box-shadow: 0 0 10px rgba(0, 204, 255, 0.15);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.points-summary h4,
+.recent-orders h4 {
+  color: #00ccff;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.points-summary p,
+.recent-orders p {
+  color: #ddd;
+  font-size: 14px;
+  margin: 6px 0;
+}
+
+.points-summary strong,
+.recent-orders strong {
+  color: #fff;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 15px;
+  background: #333;
+  border-radius: 10px;
+  margin: 10px 0;
+  overflow: hidden;
+  box-shadow: inset 0 0 5px rgba(0, 204, 255, 0.4);
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(to right, #00ccff, #ff00cc);
+  width: 0%;
+  transition: width 0.5s ease-in-out;
+}
+
+
+</style>
+
+</head>
+<body>
+    <header>
+        <section class="logo">
+            <h2 class="visually-hidden">GamezExpress Logo</h2>
+            <img src="images/gamezexpress-logo.png" alt="GamezExpress Logo">
+        </section>
+        <h1>Manage your Account</h1>
+
+        <!-- Search Bar -->
+    <form class="search-bar">
+        <input type="text" placeholder="Search consoles..." name="search">
+        <button type="submit">🔍</button>
+    </form>
+    </header>
+
+    <section class="account-section">
+        <div class="account-card">
+            <div class="avatar">
+                <img src="https://via.placeholder.com/80" alt="User Avatar">
+            </div>
+            <div class="account-info">
+                <h3>@PlayerOne</h3>
+                <p>Ready to game 🎮</p>
+            </div>
+            <div class="account-actions">
+                <button class="edit-btn">Edit Profile</button>
+                <button class="logout-btn">Log Out</button>
+            </div>
+        </div>
+    
+    </section>
+
+    <section class="account-extra">
+        <div class="points-summary">
+            <h4>🏆 Gamer Points</h4>
+            <p><strong>Total Points:</strong> <span id="points">1,420</span></p>
+            <p><strong>Current Level:</strong> <span id="level">Platinum</span></p>
+            
+            <div class="progress-bar">
+              <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <p><span id="pointsToNext">80</span> points to <strong>Diamond</strong></p>
+          </div>
+          
+      
+        <div class="recent-orders">
+          <h4>🛒 Last Purchase</h4>
+          <p><strong>Item:</strong> Elden Ring (PS5)</p>
+          <p><strong>Date:</strong> April 2, 2025</p>
+          <p><strong>Points Gained:</strong> +120</p>
+        </div>
+      </section>
+    
+    
+    <footer>
+    <p>&copy; 2025 GamezExpress. All Rights Reserved.</p>
+    <nav>
+        <a href="index.html">Home</a> |
+        <a href="games.html">Games</a> |
+        <a href="addons.html">Add-ons</a> |
+        <a href="build.html">Build</a> |
+        <a href="account.html">Account</a>
+    </nav>
+</footer>
+</body>
+</html>
